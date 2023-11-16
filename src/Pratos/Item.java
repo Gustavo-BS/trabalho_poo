@@ -14,4 +14,35 @@ public abstract class Item {
     }
 
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public double getPrecoUnitarioVenda() {
+        return precoUnitarioVenda;
+    }
+
+    public void setPrecoUnitarioVenda(double precoUnitarioVenda) {
+        this.precoUnitarioVenda = precoUnitarioVenda;
+    }
+
+    public double getPrecoUnicatarioCusto() {
+        return precoUnicatarioCusto;
+    }
+
+    public void setPrecoUnicatarioCusto(double precoUnicatarioCusto) {
+        this.precoUnicatarioCusto = precoUnicatarioCusto;
+    }
 }

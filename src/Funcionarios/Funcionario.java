@@ -10,11 +10,14 @@ public abstract class Funcionario {
     private String endereco;
 
 
-    public Funcionario(String nome, String CPF, String RG, EstadoCivil estadoCivil, String endereco) {
+    public Funcionario() {
+    }
+
+    public Funcionario(String nome, String CPF) {
         this.nome = nome;
-        this.RG = RG;
-        this.estadoCivil = estadoCivil;
-        this.endereco = endereco;
+        //this.RG = RG;
+        //this.estadoCivil = estadoCivil;
+        //this.endereco = endereco;
         validarCPF(CPF);
     }
 
@@ -48,5 +51,25 @@ public abstract class Funcionario {
         resto = soma % 11;
         int digitoEsperado2 = (resto < 2) ? 0 : (11 - resto);
         return numeros[10] == digitoEsperado2;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCPF() {
+        return CPF;
+    }
+
+    public String getRG() {
+        return RG;
+    }
+
+    public EstadoCivil getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public String getEndereco() {
+        return endereco;
     }
 }
