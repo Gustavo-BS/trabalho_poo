@@ -1,6 +1,10 @@
+package Pratos;
+
+import Pratos.Item;
+
 import java.util.List;
 
-public class PratoSobremesa extends Item{
+public class PratoSobremesa extends Item {
     private List<String> ingredientes;
     private String descricao;
     private int tempoPreparo;

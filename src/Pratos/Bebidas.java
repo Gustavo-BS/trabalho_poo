@@ -1,4 +1,8 @@
-public class Bebidas extends Item{
+package Pratos;
+
+import Pratos.Item;
+
+public class Bebidas extends Item {
     private int tamanho;
     private TipoEmbalagem tipoEmbalagem;
 

@@ -1,7 +1,11 @@
+package Pratos;
+
+import Pratos.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class PratoPrincipal extends Item{
+public class PratoPrincipal extends Item {
     private List<String> ingredientes;
     private String descricao;
     private int tempoDePreparo;
