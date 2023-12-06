@@ -74,4 +74,6 @@ public class Funcionario implements Serializable {
     public String getEndereco() {
         return endereco;
     }
+
+    public abstract double salarioFinal();
 }
