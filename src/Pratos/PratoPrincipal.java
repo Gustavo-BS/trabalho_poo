@@ -1,25 +1,22 @@
 package Pratos;
 
-
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PratoPrincipal extends Item implements Serializable{
+public class PratoPrincipal extends Item implements Serializable {
     private static final long serialVersionUID = 1L;
     private List<String> ingredientes;
     private String descricao;
-    private int tempoDePreparo;
+    private int tempoDePreparo; // Corrigido o nome do parâmetro
 
     public PratoPrincipal(String nome, String codigo, double precoUnitarioVenda, double precoUnitarioCusto,
-        List<String> ingredientes, String descricao, int tempoDePreparo) {
+        List<String> ingredientes, String descricao, int tempoDePreparo) { // Corrigido o nome do parâmetro
         super(nome, codigo, precoUnitarioVenda, precoUnitarioCusto);
         this.ingredientes = ingredientes;
         this.descricao = descricao;
         this.tempoDePreparo = tempoDePreparo;
     }
-
 
     public List<String> getIngredientes() {
         return ingredientes;
