@@ -13,24 +13,21 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedido implements Serializable{
+public class Pedido implements Serializable {
     private static final long serialVersionUID = 1L;
     private List<ItemPedido> itens;
     private LocalDate data;
-    private LocalTime horarioRegisto;
-    private LocalTime horarioPagamento;
+    private LocalTime horarioRegistro;
     private FormaPagamento formaPagamento;
     private Cozinheiro preparou;
     private Garcon atendeu;
-    private LocalTime horarioRegistro;
 
-    private double soma;
-
-    public Pedido(LocalDate data, LocalTime horarioRegistro, Garcom atendeu, Cozinheiro preparou) {
+    public Pedido(LocalDate data, LocalTime horarioRegistro, Garcon atendeu, Cozinheiro preparou, FormaPagamento formaPagamento) {
         this.data = data;
         this.horarioRegistro = horarioRegistro;
         this.atendeu = atendeu;
         this.preparou = preparou;
+        this.formaPagamento = formaPagamento;
         this.itens = new ArrayList<>();
     }
 
