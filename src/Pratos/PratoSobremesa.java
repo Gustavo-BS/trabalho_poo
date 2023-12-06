@@ -9,16 +9,16 @@ public class PratoSobremesa extends Item implements Serializable {
     private static final long serialVersionUID = 1L;
     private List<String> ingredientes;
     private String descricao;
-    private int tempoPreparo;
+    private int tempoDePreparo; // Corrigido o nome do parâmetro
     private int calorias;
 
     public PratoSobremesa(String nome, String codigo, double precoUnitarioVenda, double precoUnitarioCusto,
-    List<String> ingredientes, String descricao, int tempoDePreparo, int calorias) {
-    super(nome, codigo, precoUnitarioVenda, precoUnitarioCusto);
-    this.ingredientes = ingredientes;
-    this.descricao = descricao;
-    this.tempoPreparo = tempoDePreparo;
-    this.calorias = calorias;
+    List<String> ingredientes, String descricao, int tempoDePreparo, int calorias) { // Corrigido o nome do parâmetro
+        super(nome, codigo, precoUnitarioVenda, precoUnitarioCusto);
+        this.ingredientes = ingredientes;
+        this.descricao = descricao;
+        this.tempoDePreparo = tempoDePreparo;
+        this.calorias = calorias;
     }
 
     public List<String> getIngredientes() {
