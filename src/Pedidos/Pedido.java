@@ -55,9 +55,11 @@ public class Pedido implements Serializable {
         this.itens.add(item);
     }
 
-    public void calcularSalarioFuncionarios(CalculoSalario calculoSalario, double totalVendas) {
-        double salarioFinalGarcom = calculoSalario.calcularSalario(totalVendas, atendeu.getSalarioBase());
-        double salarioFinalCozinheiro = calculoSalario.calcularSalario(totalVendas, preparou.getSalarioBase());
+    public void calcularSalarioFuncionarios(CalculoSalario calculoSalario) {
+        double totalVendas = soma();
+
+        double salarioFinalGarcom = ((Garcon) atendeu).calcularSalario(totalVendas, atendeu.getSalarioBase());
+        double salarioFinalCozinheiro = ((Cozinheiro) preparou).calcularSalario(totalVendas, preparou.getSalarioBase());
 
         System.out.println("Salário final do Garçom (" + atendeu.getNome() + "): " + salarioFinalGarcom);
         System.out.println("Salário final do Cozinheiro (" + preparou.getNome() + "): " + salarioFinalCozinheiro);
