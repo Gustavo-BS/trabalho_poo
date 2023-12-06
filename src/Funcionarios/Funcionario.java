@@ -1,24 +1,25 @@
 package Funcionarios;
 
+import java.io.Serializable;
 import java.util.regex.Pattern;
 
-public abstract class Funcionario {
+public abstract class Funcionario implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String nome;
     private String CPF;
-    private String RG;
     private EstadoCivil estadoCivil;
-    private String endereco;
+    private double salario;
+    private String cargo;
 
+    public Funcionario(){
 
-    public Funcionario() {
     }
-
+    
     public Funcionario(String nome, String CPF) {
         this.nome = nome;
-        //this.RG = RG;
-        //this.estadoCivil = estadoCivil;
-        //this.endereco = endereco;
         validarCPF(CPF);
+        this.CPF = CPF;
     }
 
     private void validarCPF(String CPF) {

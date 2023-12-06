@@ -1,13 +1,17 @@
 package Pratos;
 
+import java.io.Serializable;
+
 import Pratos.Item;
 
-public class Bebidas extends Item {
+public class Bebidas extends Item implements Serializable{
+    private static final long serialVersionUID = 1L;
     private int tamanho;
     private TipoEmbalagem tipoEmbalagem;
 
-    public Bebidas(String nome, String codigo, double precprecoUnitarioVenda, double precoUnicatarioCusto, int tamanho, TipoEmbalagem tipoEmbalagem){
-        super(nome, codigo, precprecoUnitarioVenda, precoUnicatarioCusto );
+    public Bebidas(String nome, String codigo, double precoUnitarioVenda, double precoUnitarioCusto,
+                   int tamanho, TipoEmbalagem tipoEmbalagem) {
+        super(nome, codigo, precoUnitarioVenda, precoUnitarioCusto);
         this.tamanho = tamanho;
         this.tipoEmbalagem = tipoEmbalagem;
     }

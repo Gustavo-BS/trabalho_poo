@@ -1,5 +1,7 @@
 package Pedidos;
 
-public enum FormaPagamento {
+import java.io.Serializable;
+
+public enum FormaPagamento implements Serializable{
     DINHEIRO, PIX, CREDITO, DEBITO
 }

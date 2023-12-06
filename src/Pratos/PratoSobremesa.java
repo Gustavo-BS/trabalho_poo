@@ -2,20 +2,23 @@ package Pratos;
 
 import Pratos.Item;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class PratoSobremesa extends Item {
+public class PratoSobremesa extends Item implements Serializable {
+    private static final long serialVersionUID = 1L;
     private List<String> ingredientes;
     private String descricao;
     private int tempoPreparo;
     private int calorias;
 
-    public PratoSobremesa(String nome, String codigo, double precprecoUnitarioVenda, double precoUnicatarioCusto,  List<String> ingredientes,String descricao, int tempoDePreparo, int calorias){
-        super(nome, codigo, precprecoUnitarioVenda, precoUnicatarioCusto );
-        this.ingredientes = ingredientes;
-        this.descricao = descricao;
-        this.tempoPreparo = tempoDePreparo;
-        this.calorias = calorias;
+    public PratoSobremesa(String nome, String codigo, double precoUnitarioVenda, double precoUnitarioCusto,
+    List<String> ingredientes, String descricao, int tempoDePreparo, int calorias) {
+    super(nome, codigo, precoUnitarioVenda, precoUnitarioCusto);
+    this.ingredientes = ingredientes;
+    this.descricao = descricao;
+    this.tempoPreparo = tempoDePreparo;
+    this.calorias = calorias;
     }
 
     public List<String> getIngredientes() {

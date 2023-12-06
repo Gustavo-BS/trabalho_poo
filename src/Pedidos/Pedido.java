@@ -6,13 +6,15 @@ import Funcionarios.Cozinheiro;
 import Funcionarios.Funcionario;
 import Funcionarios.Garcon;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pedido {
+public class Pedido implements Serializable{
+    private static final long serialVersionUID = 1L;
     private List<ItemPedido> itens;
     private LocalDate data;
     private LocalTime horarioRegisto;
@@ -20,19 +22,16 @@ public class Pedido {
     private FormaPagamento formaPagamento;
     private Cozinheiro preparou;
     private Garcon atendeu;
-
+    private LocalTime horarioRegistro;
 
     private double soma;
 
-    public Pedido(Cozinheiro preparou, Garcon atendeu, LocalDate data, LocalTime horarioRegisto) {
-        this.itens = new ArrayList<>();
+    public Pedido(LocalDate data, LocalTime horarioRegistro, Garcom atendeu, Cozinheiro preparou) {
         this.data = data;
-        this.horarioRegisto = horarioRegisto;
-        this.horarioPagamento = null;
-        this.formaPagamento = null;
-        this.preparou = preparou;
+        this.horarioRegistro = horarioRegistro;
         this.atendeu = atendeu;
-
+        this.preparou = preparou;
+        this.itens = new ArrayList<>();
     }
 
     @Override
@@ -53,6 +52,10 @@ public class Pedido {
         }
 
         return total;
+    }
+    
+    public void adicionarItem(ItemPedido item) {
+        this.itens.add(item);
     }
 
 }

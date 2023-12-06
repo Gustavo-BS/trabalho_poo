@@ -3,6 +3,7 @@ package Pedidos;
 import Pratos.Item;
 
 public class ItemPedido {
+    private static final long serialVersionUID = 1L;
     private Item item;
     private int quantidade;
 
