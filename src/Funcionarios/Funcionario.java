@@ -16,10 +16,12 @@ public abstract class Funcionario implements Serializable {
 
     }
     
-    public Funcionario(String nome, String CPF) {
+    public Funcionario(String nome, String CPF, EstadoCivil estadocivil, String cargo) {
         this.nome = nome;
         validarCPF(CPF);
         this.CPF = CPF;
+        this.estadocivil = estadocivil;
+        this.cargo = cargo;
     }
 
     private void validarCPF(String CPF) {
