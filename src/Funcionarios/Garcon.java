@@ -24,6 +24,7 @@ public class Garcon extends Funcionario implements Serializable {
 
     @Override
    public double calcularSalario(double totalVendas, double salarioBase) {
+        // Cálculo específico para o Garçom: 10% do total de vendas
         double comissao = totalVendas * 0.10;
         return salarioBase + comissao;
     }
