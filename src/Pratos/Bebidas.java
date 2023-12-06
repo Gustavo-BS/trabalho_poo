@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import Pratos.Item;
 
-public class Bebidas extends Item implements Serializable{
+public class Bebidas extends Item implements Serializable {
     private static final long serialVersionUID = 1L;
     private int tamanho;
     private TipoEmbalagem tipoEmbalagem;
