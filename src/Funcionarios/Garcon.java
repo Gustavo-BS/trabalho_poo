@@ -13,13 +13,13 @@ public class Garcon extends Funcionario implements Serializable {
     private DiaFolga diaFolga;
     private int numeroPedidos;
 
-    public Garcon(String nome, String CPF) {
-        super(nome, CPF, estadocivil);
-        this.admissao = null; // Valor inicial para admissao
-        this.carteiraTrabalho = ""; // Valor inicial para carteiraTrabalho
-        this.salarioBase = 0.0; // Valor inicial para salarioBase
-        this.diaFolga = null; // Valor inicial para diaFolga
-        this.numeroPedidos = 0; // Valor inicial para numeroPedidos
+    public Garcon(String nome, String CPF, EstadoCivil estadoCivil) {
+        super(nome, CPF, estadoCivil);
+        this.admissao = null;
+        this.carteiraTrabalho = "";
+        this.salarioBase = 0.0;
+        this.diaFolga = null;
+        this.numeroPedidos = 0;
     }
 
     @Override
