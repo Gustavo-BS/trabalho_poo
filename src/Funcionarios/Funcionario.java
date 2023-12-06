@@ -15,12 +15,12 @@ public class Funcionario implements Serializable {
 
     }
     
-    public Funcionario(String nome, String CPF, EstadoCivil estadoCivil, double salario) {
+    public Funcionario(String nome, String CPF, EstadoCivil estadoCivil, double salariobase) {
         this.nome = nome;
         validarCPF(CPF);
         this.CPF = CPF;
         this.estadoCivil = estadoCivil;
-        this.salario = salariobase;
+        this.salariobase = salariobase;
     }
 
     private void validarCPF(String CPF) {
